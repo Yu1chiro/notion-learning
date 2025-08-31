@@ -136,10 +136,6 @@ app.post('/api/generate-quiz', async (req, res) => {
         // Buat prompt untuk Gemini
         let prompt = `Buatkan 5 soal pilihan ganda dalam bahasa Jepang berdasarkan materi berikut :\n\n`;
         
-        if (title) {
-            prompt += `Judul: ${title}\n\n`;
-        }
-        
         if (description) {
             prompt += `Note: ${description}\n\n`;
         }
@@ -155,8 +151,8 @@ app.post('/api/generate-quiz', async (req, res) => {
 {
   "questions": [
     {
-      "question": "Pertanyaan disini?",
-      "options": ["A. Pilihan 1", "B. Pilihan 2", "C. Pilihan 3", "D. Pilihan 4"],
+      "question": "明日、仕事があるから、早く＿＿",
+      "options": ["A. 寝ないと", "B. 寝られる", "C. 寝ない", "D. 寝させる"],
       "correct": 0,
       "explanation": "Penjelasan jawaban yang benar"
     }
